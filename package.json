@@ -1,0 +1,23 @@
+{
+  "name": "matiz",
+  "version": "1.0.0",
+  "description": "Editor de imagens no estilo do Paint do Windows, com camadas, pincéis artísticos, formas, texto, remoção de fundo e uma aba dedicada à pixel art.",
+  "private": true,
+  "type": "module",
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Erik Pimenta",
+  "homepage": "https://github.com/ravelroot/Raster-Paint-and-Pixel-Art-Editor#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ravelroot/Raster-Paint-and-Pixel-Art-Editor.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test \"tests/js/**/*.test.js\"",
+    "serve": "node scripts/serve.js",
+    "portable": "node scripts/build-portable.js",
+    "desktop": "node scripts/build-desktop.js"
+  }
+}

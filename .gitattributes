@@ -1,0 +1,11 @@
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+*.png binary
+*.pdf binary
+*.exe binary
+*.matiz linguist-language=JSON
+*.matizpx linguist-language=JSON
+Matiz.html text eol=lf linguist-generated
+docs/** linguist-documentation

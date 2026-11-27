@@ -1,0 +1,11 @@
+node_modules/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+desktop/Matiz.html
+desktop/matiz.ico
+desktop/versioninfo.json
+desktop/*.syso

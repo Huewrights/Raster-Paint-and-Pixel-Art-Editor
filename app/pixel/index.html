@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="./">
+    <title>Pixel Art · Matiz</title>
+    <meta name="description" content="Matiz Pixel Art: editor de pixel art baseado em matrizes, com camadas, paletas, simetria e histórico ilimitado.">
+    <meta name="color-scheme" content="light dark">
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/editor.css">
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <span id="logo" class="logo" aria-hidden="true"></span>
+          <span class="brand-name">Matiz</span>
+        </div>
+        <div id="mode-switch" class="mode-switch" role="tablist" aria-label="Modo do editor"></div>
+        <nav id="menus" class="menus" aria-label="Menu principal"></nav>
+        <input id="project-name" class="project-name" type="text" maxlength="120" aria-label="Nome do projeto" spellcheck="false">
+        <div class="topbar-actions">
+          <button id="undo" type="button" class="icon-button" aria-label="Desfazer"></button>
+          <button id="redo" type="button" class="icon-button" aria-label="Refazer"></button>
+          <button id="save" type="button" class="icon-button" title="Salvar (Ctrl+S)" aria-label="Salvar"></button>
+          <div class="menu-group">
+            <button id="palette" type="button" class="icon-button" aria-haspopup="true" aria-expanded="false" aria-label="Paleta de cores da interface" title="Paleta de cores da interface"></button>
+            <div id="palette-menu" class="menu menu-right" role="menu" hidden></div>
+          </div>
+          <button id="theme" type="button" class="icon-button" aria-label="Alternar tema"></button>
+        </div>
+      </header>
+      <nav id="tools" class="tools" aria-label="Ferramentas"></nav>
+      <div class="options-bar">
+        <div id="options" class="options" aria-label="Opções da ferramenta"></div>
+      </div>
+      <main class="area">
+        <div id="doc-tabs" class="doc-tabs" role="tablist" aria-label="Projetos abertos"></div>
+        <div class="canvas-host">
+          <canvas id="viewport" aria-label="Matriz de pixels. Use as ferramentas da barra lateral para desenhar."></canvas>
+          <div id="view" class="view" aria-label="Visualização"></div>
+          <div id="minimap" class="minimap" hidden></div>
+        </div>
+      </main>
+      <aside class="sidebar" aria-label="Cores, paletas e camadas">
+        <section class="panel">
+          <h2>Cor</h2>
+          <div id="color-panel"></div>
+        </section>
+        <section class="panel">
+          <h2>Paleta</h2>
+          <div id="palette-panel"></div>
+        </section>
+        <section class="panel">
+          <h2>Tons</h2>
+          <div id="ramp-panel"></div>
+        </section>
+        <section class="panel layers-panel">
+          <h2>Camadas</h2>
+          <div id="layers-panel"></div>
+        </section>
+      </aside>
+      <footer class="status">
+        <span id="status-position" class="mono">–</span>
+        <span id="status-color" class="mono status-color"></span>
+        <span id="status-size"></span>
+        <span id="status-zoom" class="mono"></span>
+        <span id="status-selection" class="mono"></span>
+        <span id="status-history"></span>
+        <span id="status-storage" class="status-storage"></span>
+      </footer>
+    </div>
+    <div id="toasts" class="toasts" aria-live="polite"></div>
+  </body>
+</html>
